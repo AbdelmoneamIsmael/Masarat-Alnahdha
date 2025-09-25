@@ -22,7 +22,7 @@ class MassaratAlnahda extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp.router(
-          title: 'AFAQ Store',
+          title: 'Masarat Alnahda',
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           locale: const Locale('ar'),

@@ -43,7 +43,7 @@ class LoginPage extends StatelessWidget {
                   children: [
                     80.verticalSpace,
                     const CustomTitledLogo(
-                      title: "أهلًا بيك في الرفيل",
+                      title: "اهلا بك",
                       subtitle: '"سجّل الدخول إلى حسابك" ',
                       logoImage: AppImage.logo,
                     ),
