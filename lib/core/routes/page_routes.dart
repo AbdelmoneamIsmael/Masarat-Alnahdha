@@ -37,6 +37,7 @@ import 'package:masarat_alnahdha/features/rider/features/home_rider/presentation
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:masarat_alnahdha/features/subcategories/presentation/pages/sub_categories_screen.dart';
 import 'package:masarat_alnahdha/features/termis_and_condition/termis_and_conditions.dart';
 
 import '../../core/helper/bloc_observer.dart';
@@ -543,6 +544,16 @@ class PageRoutes {
           context: context,
           state: state,
           child: const ChatPage(),
+        ),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootNavigatorKey,
+        name: PagesKeys.subCategory,
+        path: "/${PagesKeys.subCategory}",
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const SubCategoriesScreen(),
         ),
       ),
     ],

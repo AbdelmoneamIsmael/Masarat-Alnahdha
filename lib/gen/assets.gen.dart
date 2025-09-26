@@ -279,35 +279,96 @@ class $AssetsExproductsGen {
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
+  /// File path: assets/fonts/Cairo-Black.ttf
+  String get cairoBlack => 'assets/fonts/Cairo-Black.ttf';
+
+  /// File path: assets/fonts/Cairo-Bold.ttf
+  String get cairoBold => 'assets/fonts/Cairo-Bold.ttf';
+
+  /// File path: assets/fonts/Cairo-ExtraBold.ttf
+  String get cairoExtraBold => 'assets/fonts/Cairo-ExtraBold.ttf';
+
+  /// File path: assets/fonts/Cairo-ExtraLight.ttf
+  String get cairoExtraLight => 'assets/fonts/Cairo-ExtraLight.ttf';
+
+  /// File path: assets/fonts/Cairo-Light.ttf
+  String get cairoLight => 'assets/fonts/Cairo-Light.ttf';
+
+  /// File path: assets/fonts/Cairo-Medium.ttf
+  String get cairoMedium => 'assets/fonts/Cairo-Medium.ttf';
+
+  /// File path: assets/fonts/Cairo-Regular.ttf
+  String get cairoRegular => 'assets/fonts/Cairo-Regular.ttf';
+
+  /// File path: assets/fonts/Cairo-SemiBold.ttf
+  String get cairoSemiBold => 'assets/fonts/Cairo-SemiBold.ttf';
+
+  /// File path: assets/fonts/Tajawal-Black copy.ttf
+  String get tajawalBlackCopy => 'assets/fonts/Tajawal-Black copy.ttf';
+
   /// File path: assets/fonts/Tajawal-Black.ttf
   String get tajawalBlack => 'assets/fonts/Tajawal-Black.ttf';
+
+  /// File path: assets/fonts/Tajawal-Bold copy.ttf
+  String get tajawalBoldCopy => 'assets/fonts/Tajawal-Bold copy.ttf';
 
   /// File path: assets/fonts/Tajawal-Bold.ttf
   String get tajawalBold => 'assets/fonts/Tajawal-Bold.ttf';
 
+  /// File path: assets/fonts/Tajawal-ExtraBold copy.ttf
+  String get tajawalExtraBoldCopy => 'assets/fonts/Tajawal-ExtraBold copy.ttf';
+
   /// File path: assets/fonts/Tajawal-ExtraBold.ttf
   String get tajawalExtraBold => 'assets/fonts/Tajawal-ExtraBold.ttf';
+
+  /// File path: assets/fonts/Tajawal-ExtraLight copy.ttf
+  String get tajawalExtraLightCopy =>
+      'assets/fonts/Tajawal-ExtraLight copy.ttf';
 
   /// File path: assets/fonts/Tajawal-ExtraLight.ttf
   String get tajawalExtraLight => 'assets/fonts/Tajawal-ExtraLight.ttf';
 
+  /// File path: assets/fonts/Tajawal-Light copy.ttf
+  String get tajawalLightCopy => 'assets/fonts/Tajawal-Light copy.ttf';
+
   /// File path: assets/fonts/Tajawal-Light.ttf
   String get tajawalLight => 'assets/fonts/Tajawal-Light.ttf';
 
+  /// File path: assets/fonts/Tajawal-Medium copy.ttf
+  String get tajawalMediumCopy => 'assets/fonts/Tajawal-Medium copy.ttf';
+
   /// File path: assets/fonts/Tajawal-Medium.ttf
   String get tajawalMedium => 'assets/fonts/Tajawal-Medium.ttf';
+
+  /// File path: assets/fonts/Tajawal-Regular copy.ttf
+  String get tajawalRegularCopy => 'assets/fonts/Tajawal-Regular copy.ttf';
 
   /// File path: assets/fonts/Tajawal-Regular.ttf
   String get tajawalRegular => 'assets/fonts/Tajawal-Regular.ttf';
 
   /// List of all assets
   List<String> get values => [
+    cairoBlack,
+    cairoBold,
+    cairoExtraBold,
+    cairoExtraLight,
+    cairoLight,
+    cairoMedium,
+    cairoRegular,
+    cairoSemiBold,
+    tajawalBlackCopy,
     tajawalBlack,
+    tajawalBoldCopy,
     tajawalBold,
+    tajawalExtraBoldCopy,
     tajawalExtraBold,
+    tajawalExtraLightCopy,
     tajawalExtraLight,
+    tajawalLightCopy,
     tajawalLight,
+    tajawalMediumCopy,
     tajawalMedium,
+    tajawalRegularCopy,
     tajawalRegular,
   ];
 }
@@ -613,6 +674,137 @@ class $AssetsLottieGen {
   ];
 }
 
+class $AssetsMasaratCategoriesGen {
+  const $AssetsMasaratCategoriesGen();
+
+  /// File path: assets/masarat_categories/dishes.jpeg
+  AssetGenImage get dishesJpeg =>
+      const AssetGenImage('assets/masarat_categories/dishes.jpeg');
+
+  /// File path: assets/masarat_categories/dishes.webp
+  AssetGenImage get dishesWebp =>
+      const AssetGenImage('assets/masarat_categories/dishes.webp');
+
+  /// File path: assets/masarat_categories/frozen_imge.jpg
+  AssetGenImage get frozenImge =>
+      const AssetGenImage('assets/masarat_categories/frozen_imge.jpg');
+
+  /// File path: assets/masarat_categories/kbda.webp
+  AssetGenImage get kbda =>
+      const AssetGenImage('assets/masarat_categories/kbda.webp');
+
+  /// File path: assets/masarat_categories/meats.jpeg
+  AssetGenImage get meats =>
+      const AssetGenImage('assets/masarat_categories/meats.jpeg');
+
+  /// File path: assets/masarat_categories/mwad saala.jpg
+  AssetGenImage get mwadSaala =>
+      const AssetGenImage('assets/masarat_categories/mwad saala.jpg');
+
+  /// File path: assets/masarat_categories/oils.webp
+  AssetGenImage get oils =>
+      const AssetGenImage('assets/masarat_categories/oils.webp');
+
+  /// File path: assets/masarat_categories/rise.jpg
+  AssetGenImage get rise =>
+      const AssetGenImage('assets/masarat_categories/rise.jpg');
+
+  /// File path: assets/masarat_categories/veg.jpg
+  AssetGenImage get veg =>
+      const AssetGenImage('assets/masarat_categories/veg.jpg');
+
+  /// File path: assets/masarat_categories/نزيش.webp
+  AssetGenImage get a =>
+      const AssetGenImage('assets/masarat_categories/نزيش.webp');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+    dishesJpeg,
+    dishesWebp,
+    frozenImge,
+    kbda,
+    meats,
+    mwadSaala,
+    oils,
+    rise,
+    veg,
+    a,
+  ];
+}
+
+class $AssetsMasaratSubcatGen {
+  const $AssetsMasaratSubcatGen();
+
+  /// File path: assets/masarat_subcat/altanmya.jpg
+  AssetGenImage get altanmya =>
+      const AssetGenImage('assets/masarat_subcat/altanmya.jpg');
+
+  /// File path: assets/masarat_subcat/dgagMoqat3.webp
+  AssetGenImage get dgagMoqat3 =>
+      const AssetGenImage('assets/masarat_subcat/dgagMoqat3.webp');
+
+  /// File path: assets/masarat_subcat/doux.jpg
+  AssetGenImage get doux =>
+      const AssetGenImage('assets/masarat_subcat/doux.jpg');
+
+  /// File path: assets/masarat_subcat/faqeh.jpeg
+  AssetGenImage get faqeh =>
+      const AssetGenImage('assets/masarat_subcat/faqeh.jpeg');
+
+  /// File path: assets/masarat_subcat/helal.jpeg
+  AssetGenImage get helal =>
+      const AssetGenImage('assets/masarat_subcat/helal.jpeg');
+
+  /// File path: assets/masarat_subcat/mfrom dgag.jpg
+  AssetGenImage get mfromDgag =>
+      const AssetGenImage('assets/masarat_subcat/mfrom dgag.jpg');
+
+  /// File path: assets/masarat_subcat/qualiko.jpg
+  AssetGenImage get qualiko =>
+      const AssetGenImage('assets/masarat_subcat/qualiko.jpg');
+
+  /// File path: assets/masarat_subcat/radwa.jpeg
+  AssetGenImage get radwa =>
+      const AssetGenImage('assets/masarat_subcat/radwa.jpeg');
+
+  /// File path: assets/masarat_subcat/sadya.png
+  AssetGenImage get sadya =>
+      const AssetGenImage('assets/masarat_subcat/sadya.png');
+
+  /// File path: assets/masarat_subcat/sahel.jpeg
+  AssetGenImage get sahel =>
+      const AssetGenImage('assets/masarat_subcat/sahel.jpeg');
+
+  /// File path: assets/masarat_subcat/sdor dgag.jpeg
+  AssetGenImage get sdorDgag =>
+      const AssetGenImage('assets/masarat_subcat/sdor dgag.jpeg');
+
+  /// File path: assets/masarat_subcat/shawrma.jpg
+  AssetGenImage get shawrma =>
+      const AssetGenImage('assets/masarat_subcat/shawrma.jpg');
+
+  /// File path: assets/masarat_subcat/watanya.jpeg
+  AssetGenImage get watanya =>
+      const AssetGenImage('assets/masarat_subcat/watanya.jpeg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+    altanmya,
+    dgagMoqat3,
+    doux,
+    faqeh,
+    helal,
+    mfromDgag,
+    qualiko,
+    radwa,
+    sadya,
+    sahel,
+    sdorDgag,
+    shawrma,
+    watanya,
+  ];
+}
+
 class $AssetsSvgsGen {
   const $AssetsSvgsGen();
 
@@ -718,6 +910,10 @@ class Assets {
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLottieGen lottie = $AssetsLottieGen();
+  static const $AssetsMasaratCategoriesGen masaratCategories =
+      $AssetsMasaratCategoriesGen();
+  static const $AssetsMasaratSubcatGen masaratSubcat =
+      $AssetsMasaratSubcatGen();
   static const $AssetsSvgsGen svgs = $AssetsSvgsGen();
 }
 

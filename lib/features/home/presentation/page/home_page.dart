@@ -1,4 +1,6 @@
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:masarat_alnahdha/core/const/app_const.dart';
+import 'package:masarat_alnahdha/core/const/exampels_for_app.dart';
 import 'package:masarat_alnahdha/core/widgets/animated_grid_view.dart';
 import 'package:masarat_alnahdha/core/widgets/product_card.dart';
 import 'package:masarat_alnahdha/core/widgets/sliver_location_view.dart';
@@ -108,6 +110,7 @@ class HomePage extends StatelessWidget {
                   // HomeAdsView(),
                   // 20.verticalSpace,
                   CategoriesView(),
+             
                   // HotOfferView(),
                   NewProductsView(),
                   BestOffersGridView(),
