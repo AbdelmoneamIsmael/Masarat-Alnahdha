@@ -1,10 +1,15 @@
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:masarat_alnahdha/core/const/exampels_for_app.dart';
 import 'package:masarat_alnahdha/core/generated/app_image.dart';
+import 'package:masarat_alnahdha/core/models/categories/categorie_model.dart';
 import 'package:masarat_alnahdha/core/routes/pages_keys.dart';
 import 'package:masarat_alnahdha/core/themes/styles/app_text_style.dart';
+import 'package:masarat_alnahdha/core/widgets/marquee_text_widget.dart';
 import 'package:masarat_alnahdha/core/widgets/title_tale.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:masarat_alnahdha/gen/assets.gen.dart';
 
 class CategoriesView extends StatelessWidget {
   const CategoriesView({super.key});
@@ -25,30 +30,46 @@ class CategoriesView extends StatelessWidget {
               // shell.goBranch(3); // يفتح الـ ProfilePage tab
             },
           ),
-
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Column(
-              children: [
-                CategoryItem(
-                  image: "assets/images/meets.png",
-                  title: 'قسم اللحوم',
-                ),
-                16.verticalSpace,
-                CategoryItem(
-                  alignment: Alignment.topRight,
-                  image: "assets/images/fruts.png",
-                  title: 'قسم الفاكهة',
+          StaggeredGrid.count(
+            crossAxisCount: 10,
+            mainAxisSpacing: 4,
+            crossAxisSpacing: 4,
+            children: List.generate(
+              categoriesList.length,
+              (index) => StaggeredGridTile.count(
+                crossAxisCellCount: index == 0 ? 10 : 5,
+                mainAxisCellCount: index % 2 == 0 ? 6 : 5,
+                child: CategoryItem(
+                  categoryModel: categoriesList[index],
                   isLeft: false,
                 ),
-                16.verticalSpace,
-                CategoryItem(
-                  image: "assets/images/vigitable.png",
-                  title: 'خضار الرفيل',
-                ),
-              ],
+              ),
             ),
+            // [
+
+            //   StaggeredGridTile.count(
+            //     crossAxisCellCount: 5,
+            //     mainAxisCellCount: 6,
+            //     child: CategoryItem(categoryModel: categories[0]),
+            //   ),
+            //   StaggeredGridTile.count(
+            //     crossAxisCellCount: 5,
+            //     mainAxisCellCount: 5,
+            //     child: Container(color: Colors.red),
+            //   ),
+            //   StaggeredGridTile.count(
+            //     crossAxisCellCount: 5,
+            //     mainAxisCellCount: 6,
+            //     child: Container(color: Colors.red),
+            //   ),
+            //   StaggeredGridTile.count(
+            //     crossAxisCellCount: 5,
+            //     mainAxisCellCount: 5,
+            //     child: Container(color: Colors.red),
+            //   ),
+            // ],
           ),
+
           // Row(
           //   spacing: 8.w,
           //   children: [
@@ -111,12 +132,11 @@ class CategoriesView extends StatelessWidget {
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
     super.key,
-    required this.image,
-    required this.title,
+    required this.categoryModel,
     this.alignment,
     this.isLeft = true,
   });
-  final String image, title;
+  final CategorieModel categoryModel;
   final AlignmentGeometry? alignment;
   final bool isLeft;
   @override
@@ -132,38 +152,46 @@ class CategoryItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.r),
           // color: Colors.black.withValues(alpha: 1),
           image: DecorationImage(
-            fit: BoxFit.fitWidth,
-            image: AssetImage(image), //CachedNetworkImageProvider( ),
+            fit: BoxFit.cover,
+            image: AssetImage(
+              categoryModel.imagefrontsmallurl!,
+            ), //CachedNetworkImageProvider( ),
           ),
         ),
         // border: Border.all(color: Colors.grey, width: 0.5),
         child: Container(
           color: Colors.black.withValues(alpha: .2),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 6.0),
-                  child: Row(
-                    mainAxisAlignment: isLeft
-                        ? MainAxisAlignment.end
-                        : MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: AppTextStyle.bold18(
-                          context,
-                        ).copyWith(color: Colors.white),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 6.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.topRight,
+                        child: MarqueeTextWidget(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              categoryModel.name!,
+                              style: AppTextStyle.bold18(
+                                context,
+                              ).copyWith(color: Colors.white),
+                            ),
+                          ),
+                        ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                Image.asset(AppImage.logo, width: 50.w, height: 50.h),
-              ],
-            ),
+              ),
+              Image.asset(AppImage.logo, width: 50.w, height: 50.h),
+            ],
           ),
         ),
       ),

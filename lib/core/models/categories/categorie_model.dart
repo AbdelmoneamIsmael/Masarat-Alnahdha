@@ -4,8 +4,14 @@ class CategorieModel {
   String? id;
   String? name;
   String? imagefrontsmallurl;
+  bool? hasSubCategories;
 
-  CategorieModel({this.id, this.name, this.imagefrontsmallurl});
+  CategorieModel({
+    this.id,
+    this.name,
+    this.imagefrontsmallurl,
+    this.hasSubCategories,
+  });
 
   // ---------------------------------------------------------------------------
   // JSON
