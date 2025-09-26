@@ -3,6 +3,7 @@ import 'package:masarat_alnahdha/core/themes/colors/colors.dart';
 import 'package:masarat_alnahdha/core/themes/styles/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:masarat_alnahdha/gen/assets.gen.dart';
 
 class LocationView extends StatelessWidget {
   const LocationView({super.key});
@@ -23,7 +24,7 @@ class LocationView extends StatelessWidget {
                 // color: LightColors.greyColor,
                 // shape: BoxShape.circle,
               ),
-              child: Image.asset(AppImage.logo),
+              child: Image.asset(Assets.images.appLogoNoBackground.path),
             ),
             8.horizontalSpace,
             Text(

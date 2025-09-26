@@ -51,18 +51,18 @@ class CustomTitledLogo extends StatelessWidget {
                       )
                     : Image.asset(
                         logoImage,
-                        width: 170,
-                        height: 170,
+                        width: 250.w,
+
                         fit: BoxFit.scaleDown,
                       ),
               ),
             ],
           ),
         ),
-        SizedBox(height: 38),
+
         Text(
           title,
-          style: TextStyles.font18MintBold  .copyWith(
+          style: TextStyles.font18MintBold.copyWith(
             fontSize: 20.sp,
             color: Theme.of(context).colorScheme.surface,
           ),
