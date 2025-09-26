@@ -372,9 +372,9 @@ class $AssetsImagesGen {
   AssetGenImage get callender =>
       const AssetGenImage('assets/images/callender.png');
 
-  /// File path: assets/images/chatboot.jpeg
+  /// File path: assets/images/chatBoot.jpg
   AssetGenImage get chatboot =>
-      const AssetGenImage('assets/images/chatboot.jpeg');
+      const AssetGenImage('assets/images/chatBoot.png');
 
   /// File path: assets/images/clock.png
   AssetGenImage get clock => const AssetGenImage('assets/images/clock.png');

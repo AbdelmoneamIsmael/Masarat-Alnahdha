@@ -68,7 +68,12 @@ class CustomTitledLogo extends StatelessWidget {
           ),
         ),
         8.verticalSpace,
-        Text(subtitle, style: TextStyles.font15BlackRegular),
+        Text(
+          subtitle,
+          style: TextStyles.font15BlackRegular.copyWith(
+            color: Theme.of(context).colorScheme.surface.withValues(alpha: 0.7),
+          ),
+        ),
       ],
     );
   }

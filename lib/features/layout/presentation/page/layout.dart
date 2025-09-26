@@ -23,11 +23,12 @@ class LayoutView extends StatelessWidget {
         final LayoutCubit layoutCubit = BlocProvider.of<LayoutCubit>(context);
         return ScreenWrapper(
           floatingActionButton: FloatingActionButton(
+            backgroundColor: Theme.of(context).primaryColor,
             clipBehavior: Clip.antiAlias,
             onPressed: () {
               GoRouter.of(context).push(PagesKeys.chatPage);
             },
-            child: Image.asset('assets/images/chatboot.jpeg'),
+            child: Image.asset('assets/images/chatBoot.png'),
           ),
           key: layoutCubit.scaffoldKey,
           drawer: CustomDrawer(),

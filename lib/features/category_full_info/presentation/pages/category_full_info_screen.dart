@@ -270,7 +270,7 @@ class LinearButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           gradient: const LinearGradient(
-            colors: [Color(0xff267349), Color(0xff5CAB4A)],
+            colors: [Color(0xff003d7f), Color(0xff007bff)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),

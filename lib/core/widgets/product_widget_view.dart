@@ -173,7 +173,7 @@ class _AddToCartShip extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.green.withValues(alpha: 0.92),
+        color: Theme.of(context).colorScheme.surface.withValues(alpha: 0.92),
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
@@ -204,7 +204,9 @@ class _FavoriteButton extends StatelessWidget {
       width: 32,
       height: 32,
       decoration: BoxDecoration(
-        color: isActive ? Colors.red : Colors.green.withValues(alpha: 0.92),
+        color: isActive
+            ? Colors.red
+            : Theme.of(context).colorScheme.surface.withValues(alpha: 0.92),
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(

@@ -17,9 +17,9 @@ ThemeData lightTheme = ThemeData(
     secondary: LightColors.secondButtonColor,
     shadow: LightColors.text2Color,
     error: LightColors.redColor,
-    surface: LightColors.greenColor,
+    surface:LightColors.primaryColor , // LightColors.greenColor,
     onPrimary: LightColors.offWhite,
-    onSecondary: LightColors.greenColor,
+    onSecondary: LightColors.secondBackgroundColor,
     inversePrimary: LightColors.blueColor,
   ),
   textTheme: const TextTheme(
@@ -54,10 +54,10 @@ ThemeData lightTheme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      backgroundColor: LightColors.buttonColor,
+      backgroundColor: LightColors.primaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.r),
-        side: const BorderSide(color: LightColors.buttonColor),
+        side: const BorderSide(color: LightColors.primaryColor),
       ),
       textStyle: TextStyle(
         fontFamily: kFontFamily,

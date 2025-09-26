@@ -20,7 +20,7 @@ class HelpPageItem extends StatelessWidget {
         ),
         children: [
           Container(
-            color: Colors.green.withValues(alpha: 0.8),
+            color: Theme.of(context).colorScheme.surface.withValues(alpha: 0.8),
             child: ListTile(
               onTap: () => {},
               title: Text(

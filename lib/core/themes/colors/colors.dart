@@ -20,26 +20,28 @@ import 'package:flutter/material.dart';
 // }
 abstract class LightColors {
   static Color backgroundColor = const Color(
-    0xFFF5F5F5,//0xFFffffff
-    );
-  static Color secondBackgroundColor = const Color(0xFFFfffff);
+    0xFFF5F5F5, //0xFFffffff
+  );
+  static Color secondBackgroundColor = const Color(
+    0xFF00BFA5, // 0xFFFfffff
+  );
   static const Color forGroundColor = Color(
     0xFFFFFFFF,
   ); // White foreground for cards and containers
   static const Color textColor = Color(
-   0xFF212121// 0xFF353055,
+    0xFF212121, // 0xFF353055,
   ); // Dark grey for primary text
   static const Color text2Color = Color(
     0xFF666666,
   ); // Lighter grey for secondary text
   static const Color primaryColor = Color(
-     0xFF007BFF ,//0xFF267349,
+    0xFF007BFF, //0xFF267349,
   ); // Green from buttons and accents
   static const Color buttonColor = Color(
     0xFF00A651,
   ); // Green for primary buttons
   static const Color secondButtonColor = Color(
-    0xFF00BFA5,//0xFFB8D0FE,
+    0xFF00BFA5, //0xFFB8D0FE,
   ); // White for secondary buttons
   static const Color containerColor = Color(
     0xFFFFFFFF,
