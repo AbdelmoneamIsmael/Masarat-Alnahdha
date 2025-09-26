@@ -64,6 +64,23 @@ flutter:
     - assets/lottie/
     - assets/masarat_categories/
     - assets/masarat_subcat/
+    - assets/masarat/التنمية/
+    - assets/masarat/الصدور/
+    - assets/masarat/الوطنية/
+    - assets/masarat/خضراوات/
+    - assets/masarat/دجاج دوكس/
+    - assets/masarat/دجاج ساديا/
+    - assets/masarat/دجاج فقيه/
+    - assets/masarat/رضوى/
+    - assets/masarat/زيوت/
+    - assets/masarat/شاورما الدجاج/
+    - assets/masarat/كبده/
+    - assets/masarat/كواليكوا/
+    - assets/masarat/لحوم/
+    - assets/masarat/مفروم الدجاج/
+    - assets/masarat/مقطعات دجاج/
+    - assets/masarat/منتجات ورقية وبلاستيكية/
+    - assets/masarat/مواد جافة وسائلة/
   fonts:
     - family: Tajawal
       fonts:
