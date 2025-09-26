@@ -21,6 +21,8 @@ class PagesKeys {
   static const notificationPage = '/notificationPage';
   static const profileAddressPage = '/profileAddressPage';
   static const chatPage = '/chatPage';
+  static const ordersPage = '/ordersPage';
+  static const subCategory = 'subCategory';
   //resturant screens
   static const resturantHomePage = '/resturantHomePage';
   static const resturantFoodListPage = '/resturantFoodListPage';

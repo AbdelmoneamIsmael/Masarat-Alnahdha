@@ -40,6 +40,11 @@ class CategoriesView extends StatelessWidget {
                 crossAxisCellCount: index == 0 ? 10 : 5,
                 mainAxisCellCount: index % 2 == 0 ? 6 : 5,
                 child: CategoryItem(
+                  onTap: () {
+                    if (index == 0) {
+                      context.pushNamed(PagesKeys.subCategory);
+                    }
+                  },
                   categoryModel: categoriesList[index],
                   isLeft: false,
                 ),
@@ -131,20 +136,26 @@ class CategoriesView extends StatelessWidget {
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
+    this.height,
     super.key,
     required this.categoryModel,
     this.alignment,
     this.isLeft = true,
+    this.onTap,
   });
   final CategorieModel categoryModel;
   final AlignmentGeometry? alignment;
   final bool isLeft;
+  final void Function()? onTap;
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => GoRouter.of(context).pushNamed(PagesKeys.categoryInfoScreen),
+      onTap:
+          onTap ??
+          () => GoRouter.of(context).pushNamed(PagesKeys.categoryInfoScreen),
       child: Container(
-        height: 150.h,
+        height: height ?? 150.h,
         width: double.infinity,
 
         clipBehavior: Clip.antiAlias,
