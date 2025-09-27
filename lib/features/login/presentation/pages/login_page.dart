@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
           applayAnotation: false,
           backgroundImage: DecorationImage(
             image: AssetImage(
-              Assets.exproducts.geminiGeneratedImage5osqoo5osqoo5osq.path,
+              "assets/images/login.jpg",
             ),
             fit: BoxFit.cover,
           ),

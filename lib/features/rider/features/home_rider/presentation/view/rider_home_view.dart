@@ -221,7 +221,7 @@ class DeleveryOrdersWidget extends StatelessWidget {
             title: "إجمالي الطلبية",
             value: "",
             child: Text(
-              "${riderOrder.totalAmount} د.ع",
+              "${riderOrder.totalAmount} ر.س",
               style: AppTextStyle.bold14h24(
                 context,
               ).copyWith(color: LightColors.orangeColor),

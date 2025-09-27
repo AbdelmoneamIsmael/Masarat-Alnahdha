@@ -26,10 +26,10 @@ class CategoriesInfoScreen extends StatelessWidget {
             // automaticallyImplyLeading: false,
             toolbarHeight: 0,
             iconTheme: IconThemeData(color: Colors.white),
-            backgroundColor: Color(0xFF478D37),
+            backgroundColor: LightColors.primaryColor,
             // backgroundColor: LightColors.greenColor,
             systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: LightColors.backgroundColor,
+              statusBarColor: LightColors.primaryColor,
               statusBarBrightness: Brightness.dark,
               statusBarIconBrightness: Brightness.dark,
             ),
@@ -75,7 +75,7 @@ class CategoriesInfoScreen extends StatelessWidget {
                       ),
                       padding: EdgeInsets.all(10.w),
                       decoration: BoxDecoration(
-                        color: Color(0xFF478D37),
+                        color: LightColors.primaryColor,
                         shape: BoxShape.circle,
                       ),
                       child: Icon(Icons.arrow_back, color: Colors.white),

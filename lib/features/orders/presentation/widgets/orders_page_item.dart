@@ -84,7 +84,7 @@ class OrdersPageItem extends StatelessWidget {
                             12.horizontalSpace,
                             Center(
                               child: Text(
-                                '5,000 د.ع',
+                                '5,000 ر.س',
                                 style: AppTextStyle.bold16(context).copyWith(
                                   color: LightColors.primaryColor,
                                   height: 1.5,

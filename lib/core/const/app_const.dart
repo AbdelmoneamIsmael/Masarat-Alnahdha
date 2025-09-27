@@ -1,5 +1,3 @@
-
-
 import 'package:masarat_alnahdha/core/models/product/product_model.dart';
 // import 'package:masarat_alnahdha/gen/assets.gen.dart';
 
@@ -16,8 +14,6 @@ const kAppName = "Masarat Alnahdha";
 
 const internalLocalError = 700; // englishFont = "Poppins";
 
-
-
 //------------------------------------------------------------------------
 // List<ProductModel> newProductsList = [
 //   ProductModel(
@@ -26,25 +22,25 @@ const internalLocalError = 700; // englishFont = "Poppins";
 //     discount: '25%',
 //     priceAfterDiscount: 37500,
 //     productId: 99,
-//     name: 'بتنجان الرافيل',
+//     name: 'بتنجان المسارات النهضة',
 //     description:
-//         "بتنجان طازج عالي الجودة من مزارع الرافيل، مثالي للطهي والقلي ويتميز بمذاقه اللذيذ.",
+//         "بتنجان طازج عالي الجودة من مزارع المسارات النهضة، مثالي للطهي والقلي ويتميز بمذاقه اللذيذ.",
 //     imageUrl: Assets.exProductsNoBg.btngan.path,
 //   ),
 //   ProductModel(
 //     availableQuantity: 10,
 //     price: 4000,
 //     productId: 98,
-//     name: 'مشكل الرافيل',
+//     name: 'مشكل المسارات النهضة',
 //     description:
-//         "تشكيلة خضروات طازجة متنوعة من مزارع الرافيل، جاهزة للأكلات الصحية والمميزة.",
+//         "تشكيلة خضروات طازجة متنوعة من مزارع المسارات النهضة، جاهزة للأكلات الصحية والمميزة.",
 //     imageUrl: Assets.exProductsNoBg.mshkl.path,
 //   ),
 //   ProductModel(
 //     availableQuantity: 40,
 //     price: 5000,
 //     productId: 97,
-//     name: "قاس الرافيل",
+//     name: "قاس المسارات النهضة",
 //     description:
 //         "قاس طازج من أجود المحاصيل، غني بالقيمة الغذائية ومناسب لجميع الأطباق الشرقية.",
 //     imageUrl: Assets.exProductsNoBg.qas.path,
@@ -55,7 +51,7 @@ const internalLocalError = 700; // englishFont = "Poppins";
 //     discount: '25%',
 //     priceAfterDiscount: 37500,
 //     productId: 96,
-//     name: 'بتنجان الرافيل الكبير',
+//     name: 'بتنجان المسارات النهضة الكبير',
 //     description: "بتنجان حجم كبير وطازج، مثالي للمحاشي والوصفات التقليدية.",
 //     imageUrl: Assets.exProductsNoBg.btngan.path,
 //   ),
@@ -63,7 +59,7 @@ const internalLocalError = 700; // englishFont = "Poppins";
 //     availableQuantity: 10,
 //     price: 4000,
 //     productId: 95,
-//     name: 'مشكل الرافيل الصغير',
+//     name: 'مشكل المسارات النهضة الصغير',
 //     description:
 //         "خليط صغير الحجم من خضروات طازجة متنوعة، مناسب للوجبات اليومية السريعة.",
 //     imageUrl: Assets.exProductsNoBg.mshkl.path,
@@ -82,7 +78,7 @@ const internalLocalError = 700; // englishFont = "Poppins";
 //     discount: '15%',
 //     priceAfterDiscount: 42500,
 //     productId: 93,
-//     name: 'بتنجان محشي الرافيل',
+//     name: 'بتنجان محشي المسارات النهضة',
 //     description:
 //         "بتنجان خاص بالوصفات المحشية، سهل التفريغ ومثالي للمطبخ الشرقي.",
 //     imageUrl: Assets.exProductsNoBg.btngan.path,
@@ -138,7 +134,8 @@ List<ProductModel> newProductsList = [
     productId: 96,
     name: 'خضراوات',
     description: "خضراوات طازجة متنوعة، جاهزة للطهي السريع.",
-    imageUrl: "assets/masarat/خضراوات/5.1.1.1-Seara-French-Fries-1-KG-Front.png",
+    imageUrl:
+        "assets/masarat/خضراوات/5.1.1.1-Seara-French-Fries-1-KG-Front.png",
   ),
   ProductModel(
     availableQuantity: 18,
@@ -174,7 +171,8 @@ List<ProductModel> newProductsList = [
     productId: 92,
     name: 'رضوى',
     description: "دجاج رضوى طازج بعناية فائقة.",
-    imageUrl: "assets/masarat/رضوى/00d77a32-3ef4-4f21-84f2-3f957bdbf262-775.png",
+    imageUrl:
+        "assets/masarat/رضوى/00d77a32-3ef4-4f21-84f2-3f957bdbf262-775.png",
   ),
   ProductModel(
     availableQuantity: 40,
@@ -190,7 +188,8 @@ List<ProductModel> newProductsList = [
     productId: 90,
     name: "شاورما الدجاج",
     description: "شاورما دجاج جاهزة للطهي، بنكهة رائعة.",
-    imageUrl: "assets/masarat/شاورما الدجاج/690f8788-c0b8-4957-b1da-44c6607475de.png",
+    imageUrl:
+        "assets/masarat/شاورما الدجاج/690f8788-c0b8-4957-b1da-44c6607475de.png",
   ),
   ProductModel(
     availableQuantity: 9,
@@ -216,7 +215,8 @@ List<ProductModel> newProductsList = [
     productId: 87,
     name: "لحوم",
     description: "لحوم طازجة بعناية فائقة.",
-    imageUrl: "assets/masarat/لحوم/68806866_499677107257416_7817361290749280256_n.png",
+    imageUrl:
+        "assets/masarat/لحوم/68806866_499677107257416_7817361290749280256_n.png",
   ),
   ProductModel(
     availableQuantity: 11,
@@ -224,7 +224,8 @@ List<ProductModel> newProductsList = [
     productId: 86,
     name: "مفروم الدجاج",
     description: "مفروم دجاج جاهز للطهي مباشرة.",
-    imageUrl: "assets/masarat/مفروم الدجاج/5a6bcd8d-0933-4dd8-86e0-d7b5c661ed7b-500x500-Yf3dDQjr0uBlgaPlEQgKBY8P8aMp7jYx2nD4PQPE.png",
+    imageUrl:
+        "assets/masarat/مفروم الدجاج/5a6bcd8d-0933-4dd8-86e0-d7b5c661ed7b-500x500-Yf3dDQjr0uBlgaPlEQgKBY8P8aMp7jYx2nD4PQPE.png",
   ),
   ProductModel(
     availableQuantity: 38,
@@ -232,7 +233,8 @@ List<ProductModel> newProductsList = [
     productId: 85,
     name: "مقطعات دجاج",
     description: "مقطعات دجاج طازجة مثالية للقلي.",
-    imageUrl: "assets/masarat/مقطعات دجاج/372d2531-71e8-4166-a9c9-06e6dcbf3b42_size3840_cropCenter.png",
+    imageUrl:
+        "assets/masarat/مقطعات دجاج/372d2531-71e8-4166-a9c9-06e6dcbf3b42_size3840_cropCenter.png",
   ),
   ProductModel(
     availableQuantity: 55,
@@ -250,7 +252,8 @@ List<ProductModel> newProductsList = [
     productId: 83,
     name: "مواد جافة وسائلة",
     description: "مواد غذائية جافة وسائلة للمطبخ العصري.",
-    imageUrl: "assets/masarat/مواد جافة وسائلة/4bdd0c53-2b2b-4f9a-bb92-432b896f3219.png",
+    imageUrl:
+        "assets/masarat/مواد جافة وسائلة/4bdd0c53-2b2b-4f9a-bb92-432b896f3219.png",
   ),
 ];
 //----all products list
@@ -287,7 +290,8 @@ List<ProductModel> productsList = [
     productId: 96,
     name: 'خضراوات',
     description: "خضراوات طازجة متنوعة، جاهزة للطهي السريع.",
-    imageUrl: "assets/masarat/خضراوات/5.1.1.1-Seara-French-Fries-1-KG-Front.png",
+    imageUrl:
+        "assets/masarat/خضراوات/5.1.1.1-Seara-French-Fries-1-KG-Front.png",
   ),
   ProductModel(
     availableQuantity: 18,
@@ -339,7 +343,8 @@ List<ProductModel> productsList = [
     productId: 90,
     name: "شاورما الدجاج",
     description: "شاورما دجاج جاهزة للطهي، بنكهة رائعة.",
-    imageUrl: "assets/masarat/شاورما الدجاج/Al-Kabeer-Chicken-Shawarma-1kg-1.png",
+    imageUrl:
+        "assets/masarat/شاورما الدجاج/Al-Kabeer-Chicken-Shawarma-1kg-1.png",
   ),
   ProductModel(
     availableQuantity: 9,

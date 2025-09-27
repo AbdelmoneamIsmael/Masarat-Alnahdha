@@ -110,7 +110,7 @@ class RelatedProductItemDetailsSection extends StatelessWidget {
           5.verticalSpace,
           Text("الكمية : 1", style: Theme.of(context).textTheme.bodyMedium),
           5.verticalSpace,
-          Text("120 د.ع", style: Theme.of(context).textTheme.labelMedium),
+          Text("120 ر.س", style: Theme.of(context).textTheme.labelMedium),
         ],
       ),
     );

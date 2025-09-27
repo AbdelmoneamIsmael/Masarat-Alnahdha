@@ -46,7 +46,7 @@ class HomePageItem extends StatelessWidget {
                   8.verticalSpace,
                   Center(
                     child: Text(
-                      '${productModel.price} د.ع',
+                      '${productModel.price} ر.س',
                       style: AppTextStyle.bold16(
                         context,
                       ).copyWith(color: LightColors.orangeColor),

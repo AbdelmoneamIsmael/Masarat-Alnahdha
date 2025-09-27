@@ -41,10 +41,10 @@ class LocationView extends StatelessWidget {
                 ),
                 3.verticalSpace,
                 Text(
-                  'بغداد – المنصور، شارع 14 رمضان',
+                  "الرياض, المملكه العربيه السعوديه",
                   style: AppTextStyle.bold14h24(
                     context,
-                  ).copyWith(height: 1.5, color: LightColors.orangeColor),
+                  ).copyWith(height: 1.5, color: LightColors.primaryColor),
                 ),
               ],
             ),

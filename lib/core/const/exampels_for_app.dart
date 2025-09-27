@@ -9,16 +9,6 @@ List<CategorieModel> categoriesList = [
     hasSubCategories: true,
   ),
   CategorieModel(
-    id: "2",
-    name: 'قسم الزيوت',
-    imagefrontsmallurl: Assets.masaratCategories.oils.path,
-  ),
-  CategorieModel(
-    id: "3",
-    name: 'قسم الارز',
-    imagefrontsmallurl: Assets.masaratCategories.rise.path,
-  ),
-  CategorieModel(
     id: "4",
     name: 'قسم اللحوم',
     imagefrontsmallurl: Assets.masaratCategories.meats.path,
@@ -28,6 +18,17 @@ List<CategorieModel> categoriesList = [
     name: 'قسم الكبده',
     imagefrontsmallurl: Assets.masaratCategories.kbda.path,
   ),
+  CategorieModel(
+    id: "2",
+    name: 'قسم الزيوت',
+    imagefrontsmallurl: Assets.masaratCategories.oils.path,
+  ),
+  CategorieModel(
+    id: "3",
+    name: 'قسم الارز',
+    imagefrontsmallurl: Assets.masaratCategories.rise.path,
+  ),
+
   CategorieModel(
     id: "6",
     name: 'قسم الموارد الجافه والسائله',
@@ -107,7 +108,7 @@ List<CategorieModel> subCategoriesList = [
     id: "111",
     name: "مفرووم الدجاج",
     imagefrontsmallurl: Assets.masaratSubcat.mfromDgag.path,
-  hasSubCategories: true,
+    hasSubCategories: true,
   ),
   CategorieModel(
     id: "112",

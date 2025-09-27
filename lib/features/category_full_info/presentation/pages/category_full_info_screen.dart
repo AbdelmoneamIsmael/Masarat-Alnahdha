@@ -25,9 +25,9 @@ class CategoryFullInfoScreen extends StatelessWidget {
         // automaticallyImplyLeading: false,
         // toolbarHeight: 0,
         iconTheme: IconThemeData(color: Colors.white),
-        backgroundColor: Color(0xFF478D37),
+        backgroundColor: LightColors.primaryColor,
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: LightColors.backgroundColor,
+          statusBarColor: LightColors.primaryColor,
           statusBarBrightness: Brightness.dark,
           statusBarIconBrightness: Brightness.dark,
         ),
@@ -160,7 +160,7 @@ class CategoryFullInfoScreen extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "${cubit.additions[index].price}د.ع",
+                              "${cubit.additions[index].price}ر.س",
                               style: AppTextStyle.bold16(context).copyWith(
                                 height: 1.5,
 
@@ -199,18 +199,18 @@ class TimerFoodWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        PartOFTimeWidget(
-          title: "ثانية",
-          value: "${food.seconds}",
-          color: color,
+        Text(
+          "السعر",
+          style: AppTextStyle.bold16(
+            context,
+          ).copyWith(height: 1.5, color: color),
         ),
-
-        PartOFTimeWidget(
-          title: "دقيقة",
-          value: "${food.minutes}",
-          color: color,
+        Text(
+          "5000 ر.س",
+          style: AppTextStyle.bold16(
+            context,
+          ).copyWith(height: 1.5, color: LightColors.blueColor),
         ),
-        PartOFTimeWidget(title: "ساعة", value: "${food.hours}", color: color),
       ],
     );
   }
@@ -318,7 +318,7 @@ class CategoryAppBar extends SliverPersistentHeaderDelegate {
           fit: StackFit.expand,
           clipBehavior: Clip.none,
           children: [
-            Container(color: Color(0xFF478D37)),
+            Container(color: LightColors.primaryColor),
             Positioned(
               // top: expandedHeight / 2 - shrinkOffset,
               left: 0,
