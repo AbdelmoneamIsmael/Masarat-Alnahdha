@@ -81,6 +81,7 @@ flutter:
     - assets/masarat/مقطعات دجاج/
     - assets/masarat/منتجات ورقية وبلاستيكية/
     - assets/masarat/مواد جافة وسائلة/
+    - assets/masarat/ارز/
   fonts:
     - family: Tajawal
       fonts:

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:masarat_alnahdha/core/const/exampels_for_app.dart';
 import 'package:masarat_alnahdha/core/generated/app_image.dart';
+import 'package:masarat_alnahdha/core/models/categories/categorie_model.dart';
 import 'package:masarat_alnahdha/core/widgets/animated_grid_view.dart';
 import 'package:masarat_alnahdha/core/widgets/custom_app_bar.dart';
 import 'package:masarat_alnahdha/core/widgets/screen_wrapper.dart';
 import 'package:masarat_alnahdha/features/home/presentation/view/categories_view.dart';
 
 class SubCategoriesScreen extends StatelessWidget {
-  const SubCategoriesScreen({super.key});
-
+  const SubCategoriesScreen({super.key, required this.subCategoriesList});
+  final List<CategorieModel> subCategoriesList;
   @override
   Widget build(BuildContext context) {
     return ScreenWrapper(

@@ -70,9 +70,7 @@ class MasaratAssets {
     "assets/masarat/كبده/Al-Kabeer-Frozen-Chicken-Liver-450g-1.png",
   ];
 
-  static const List<String> kwalikwa = [
-    "assets/masarat/كواليكوا/kwalikwa.png",
-  ];
+  static const List<String> kwalikwa = ["assets/masarat/كواليكوا/kwalikwa.png"];
 
   static const List<String> lo7oom = [
     "assets/masarat/لحوم/Al-Kabeer-Beef-Burger-1kg-1.png",
@@ -101,6 +99,10 @@ class MasaratAssets {
     "assets/masarat/مواد جافة وسائلة/Al-Kabeer-Frozen-Green-Peas-400g.png",
     "assets/masarat/مواد جافة وسائلة/Al-Kabeer-Frozen-Molokhia-400g.png",
     "assets/masarat/مواد جافة وسائلة/Al-Kabeer-Frozen-Okra-400g.png",
+  ];
+  static final List<String> riseList = [
+    "assets/masarat/ارز/cdc8ca3d-84d7-41d9-8a29-02c85cda2804.png",
+    "assets/masarat/ارز/Al-Kabeer-Rice-5kg-1.png",
   ];
 }
 // Auto-generated list containing all image assets from assets/masarat
@@ -173,4 +175,7 @@ const List<String> masaratAll = [
   "assets/masarat/مواد جافة وسائلة/Al-Kabeer-Frozen-Green-Peas-400g.png",
   "assets/masarat/مواد جافة وسائلة/Al-Kabeer-Frozen-Molokhia-400g.png",
   "assets/masarat/مواد جافة وسائلة/Al-Kabeer-Frozen-Okra-400g.png",
+
+  "assets/masarat/ارز/cdc8ca3d-84d7-41d9-8a29-02c85cda2804.png",
+  "assets/masarat/ارز/Al-Kabeer-Rice-5kg-1.png",
 ];

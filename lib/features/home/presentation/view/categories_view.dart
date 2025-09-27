@@ -1,6 +1,7 @@
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:masarat_alnahdha/core/const/exampels_for_app.dart';
 import 'package:masarat_alnahdha/core/generated/app_image.dart';
+import 'package:masarat_alnahdha/core/masarate_sub_categories.dart';
 import 'package:masarat_alnahdha/core/models/categories/categorie_model.dart';
 import 'package:masarat_alnahdha/core/routes/pages_keys.dart';
 import 'package:masarat_alnahdha/core/themes/styles/app_text_style.dart';
@@ -22,7 +23,7 @@ class CategoriesView extends StatelessWidget {
           20.verticalSpace,
           TitleTale(
             title: 'الأقسام الرئيسية  ',
-            option: '(3)',
+            option: 'عرض الكل',
             onPressed: () {
               context.pushNamed(PagesKeys.categoryInfoScreen);
               //or
@@ -42,8 +43,50 @@ class CategoriesView extends StatelessWidget {
                 child: CategoryItem(
                   onTap: () {
                     if (index == 0) {
-                      context.pushNamed(PagesKeys.subCategory);
+                      context.pushNamed(
+                        PagesKeys.subCategory,
+                        extra: MasaratCategories.subCategoriesList,
+                      );
                     }
+                    if (index == 1) {
+                      context.pushNamed(
+                        PagesKeys.subCategory,
+                        extra: MasaratCategories.zoyotList,
+                      );
+                    }
+                    if (index == 2) {
+                      context.pushNamed(
+                        PagesKeys.subCategory,
+                        extra: MasaratCategories.riseList,
+                      );
+                    }
+                    if (index == 3) {
+                      context.pushNamed(
+                        PagesKeys.subCategory,
+                        extra: MasaratCategories.lo7oomList,
+                      );
+                    }
+                    if (index == 4) {
+                      context.pushNamed(
+                        PagesKeys.subCategory,
+                        extra: MasaratCategories.kebdaList,
+                      );
+                    }
+                    if (index == 5) {
+                      context.pushNamed(
+                        PagesKeys.subCategory,
+                        extra: MasaratCategories.mowadGafaWsa2laList,
+                      );
+                    }
+                    if (index == 6) {
+                      context.pushNamed(
+                        PagesKeys.subCategory,
+                        extra: MasaratCategories.montagatWara2yaWblastikiaList,
+                      );
+                    }
+                    // if (index == 7) {
+                    //   context.pushNamed(PagesKeys.subCategory,extra: MasaratCategories.subCategoriesList);
+                    // }
                   },
                   categoryModel: categoriesList[index],
                   isLeft: false,

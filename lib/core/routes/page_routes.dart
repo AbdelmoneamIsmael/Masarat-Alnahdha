@@ -1,4 +1,5 @@
 import 'package:masarat_alnahdha/core/di/dependency_injection.dart';
+import 'package:masarat_alnahdha/core/models/categories/categorie_model.dart';
 import 'package:masarat_alnahdha/core/models/hero_model/hero_model.dart';
 import 'package:masarat_alnahdha/core/models/product/product_model.dart';
 import 'package:masarat_alnahdha/core/utills/cache_helper.dart';
@@ -553,7 +554,9 @@ class PageRoutes {
         pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
           context: context,
           state: state,
-          child: const SubCategoriesScreen(),
+          child: SubCategoriesScreen(
+            subCategoriesList: state.extra as List<CategorieModel>,
+          ),
         ),
       ),
     ],
