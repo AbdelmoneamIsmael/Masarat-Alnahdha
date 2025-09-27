@@ -155,7 +155,7 @@ class CartDetailsSection extends StatelessWidget {
           5.verticalSpace,
 
           Text(
-            "3 قطع دجاج + 3 قطع شاورما + بطاطس + كول سلو + مشروب",
+            cartItem.description ?? "",
             style: AppTextStyle.regular12(context),
           ),
           5.verticalSpace,
@@ -165,7 +165,7 @@ class CartDetailsSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "الكمية : ${cartItem.quantity}",
+                "الكمية : ${cartItem.selectedQuantity}",
                 textAlign: TextAlign.start,
                 style: Theme.of(context).textTheme.bodyMedium,
               ).expand(),
@@ -233,7 +233,8 @@ class _CartStepperCounterState extends State<CartStepperCounter> {
         ).expand(flex: 2),
         IconButton(
           onPressed: () {
-            if (widget.cartItem.selectedQuantity < widget.cartItem.quantity) {
+            if (widget.cartItem.selectedQuantity <
+                widget.cartItem.availableQuantity) {
               setState(() {
                 counter++;
               });

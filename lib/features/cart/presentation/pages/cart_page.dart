@@ -1,5 +1,6 @@
 import 'package:masarat_alnahdha/core/widgets/loading_over_lay.dart';
 import 'package:masarat_alnahdha/features/cart/presentation/cubit/cart_screen_cubit.dart';
+import 'package:masarat_alnahdha/features/cart/presentation/cubit/cart_screen_event.dart';
 import 'package:masarat_alnahdha/features/cart/presentation/cubit/cart_screen_state.dart';
 import 'package:masarat_alnahdha/features/cart/presentation/view/cart_items_list_view.dart';
 import 'package:masarat_alnahdha/features/cart/presentation/view/invoice_details_view_and_cheekout.dart';
@@ -27,6 +28,7 @@ class _CartPageState extends State<CartPage> {
       child: BlocConsumer<CartScreenCubit, CartScreenState>(
         listener: (context, state) {},
         builder: (context, state) {
+          BlocProvider.of<CartScreenCubit>(context).add(CalcTotal());
           return Stack(
             clipBehavior: Clip.none,
             fit: StackFit.expand,
