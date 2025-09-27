@@ -106,12 +106,12 @@ class LayoutView extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.onPrimary,
       icon: SvgPicture.asset(
         icon,
-        colorFilter: ColorFilter.mode(
-          isActive
-              ? LightColors.primaryColor
-              : Theme.of(context).textTheme.bodyMedium!.color!,
-          BlendMode.srcIn,
-        ),
+        // colorFilter: ColorFilter.mode(
+        //   isActive
+        //       ? LightColors.primaryColor
+        //       : Theme.of(context).textTheme.bodyMedium!.color!,
+        //   BlendMode.srcIn,
+        // ),
       ),
       label: label,
     );
