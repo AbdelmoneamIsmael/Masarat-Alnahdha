@@ -5,7 +5,6 @@ import 'package:masarat_alnahdha/core/themes/theme/custom_theme.dart'
     as CustomTheme;
 import '../../core/l10n/app_localizations.dart';
 import '../../core/routes/page_routes.dart';
-import '../../core/themes/theme/custom_theme.dart';
 
 class MassaratAlnahda extends StatelessWidget {
   const MassaratAlnahda({super.key});

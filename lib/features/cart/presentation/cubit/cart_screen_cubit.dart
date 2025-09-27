@@ -61,6 +61,12 @@ class CartScreenCubit extends Bloc<CartScreenEvent, CartScreenState> {
     // required this.cartItems,
     // }
   ) : super(CartScreenInitial()) {
+    on<CartScreenEvent>((event, emit) {
+      if (event is CalcTotal) {
+        calculateTotalPrice(emit);
+      }
+    });
+
     // on<CartScreenEvent>(
     //   (event, emit) async {
     //     if (event is GetBillDetails) {
@@ -173,34 +179,40 @@ class CartScreenCubit extends Bloc<CartScreenEvent, CartScreenState> {
   //   emit(GetBillDetailsState());
   // }
 
-  // void init() {
-  //   for (var element in products) {
-  //     cartItems.add(
-  //       CartModel(
-  //         size: element.productSizes.first.size!,
-  //         productId: element.id!,
-  //         title: element.name!,
-  //         availableQuantity: element.productSizes.first.availableAmount!,
-  //         price: element.productSizes.first.price!,
-  //         imageUrl: element.productDocuments.first.imageUrl ?? '',
-  //         quantity: 1,
-  //         productSizeId: element.productSizes.first.id!,
-  //       ),
-  //     );
-  //   }
-  // }
+  void init() {}
 
   // void removeCartItem(CartModel cartItem) {
   //   cartItems.remove(cartItem);
   //   add(GetBillDetails());
   // }
 
-  // void addCartItem(CartModel cartItem) {
-  //   if (cartItem.quantity < cartItem.availableQuantity) {
-  //     cartItem.quantity += 1;
-  //   }
-  //   add(GetBillDetails());
-  // }
+  void addCartItem(CartModel cartItem) {
+    if (cartItem.quantity < cartItem.availableQuantity) {
+      cartItem.quantity += 1;
+    }
+    add(GetBillDetails());
+  }
+
+  //calculate total price
+  void calculateTotalPrice(Emitter<CartScreenState> emit) {
+    totalPrice = 0;
+    for (var element in cartItems) {
+      totalPrice += element.price * element.selectedQuantity;
+    }
+    emit(CalcTotalState(totalPrice: totalPrice));
+  }
+
+  // @override
+  // void emit(Emitter<CartScreenState> emit) {
+  //   on<GetBillDetails>((event, emit) {
+  //     calculateTotalBills(emit);
+  //   });
+  //   on<AddCartItem>((event, emit) {
+  //     addCartItem(event.cartItem);
+  //   });
+  //   on<RemoveCartItem>((event, emit) {
+  //     removeCartItem(event.cartItem);
+  //   });
 
   // void subtractCartItem(CartModel cartItem) {
   //   if (cartItem.quantity > 1) {

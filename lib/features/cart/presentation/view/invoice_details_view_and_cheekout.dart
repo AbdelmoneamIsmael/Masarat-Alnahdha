@@ -53,9 +53,9 @@ class IvoiceDetailsViewAndCheeckout extends StatelessWidget {
           ),
           child: Column(
             children: [
-              8.verticalSpace,
+              3.verticalSpace,
               CustomTextField(
-                radius: 20,
+                radius: 10,
                 readOnly: !cubit.applayStatus,
                 controller: cubit.discountController,
                 hintText: 'ادخل كود الخصم',
@@ -82,26 +82,27 @@ class IvoiceDetailsViewAndCheeckout extends StatelessWidget {
                   ),
                 ),
               ),
-              8.verticalSpace,
+              4.verticalSpace,
               InvoiceDetailItem(
                 title: "المجموع",
-                value: '${cubit.totalPrice} جم',
+                value: '${cubit.totalPrice} ر.س',
               ),
               InvoiceDetailItem(
                 title: " اجمالي الخصم",
-                value: '${cubit.totalDiscount} جم',
+                value: '${cubit.totalDiscount} ر.س',
               ),
               InvoiceDetailItem(
                 title: "اجرة الشحن والتوصيل",
-                value: '${cubit.shipping} جم',
+                value: '${cubit.shipping} ر.س',
               ),
-              const Divider(thickness: 1),
+              const Divider(thickness: 1, height: 0),
               InvoiceDetailItem(
                 title: "اجمالي السعر",
-                value: '${cubit.totalPriceWithShipping} د.ع',
+                value: '${cubit.totalPrice} ر.س',
               ),
-              3.verticalSpace,
+
               LinearButton(
+                padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 5.w),
                 title: "اتمام عملية الدفع",
                 icon: AppIcons.marketIcon,
                 onTap: () {

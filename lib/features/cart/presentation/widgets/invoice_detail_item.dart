@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class InvoiceDetailItem extends StatelessWidget {
   const InvoiceDetailItem({
@@ -16,11 +17,15 @@ class InvoiceDetailItem extends StatelessWidget {
       visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
       title: Text(
         title,
-        style: Theme.of(context).textTheme.bodyMedium,
+        style: Theme.of(
+          context,
+        ).textTheme.bodyMedium!.copyWith(fontSize: 15.sp),
       ),
       trailing: Text(
         value,
-        style: Theme.of(context).textTheme.bodyMedium,
+        style: Theme.of(
+          context,
+        ).textTheme.bodyMedium!.copyWith(fontSize: 15.sp),
       ),
     );
   }

@@ -9,7 +9,6 @@ import 'package:masarat_alnahdha/masarat_elnahda.dart';
 import 'package:masarat_alnahdha/core/helpers/app_constants.dart';
 import 'package:masarat_alnahdha/core/helpers/bloc_observer.dart';
 import 'package:masarat_alnahdha/core/helpers/local_storage.dart';
-import 'package:masarat_alnahdha/main.dart';
 
 LocalStorage storage = LocalStorage();
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();

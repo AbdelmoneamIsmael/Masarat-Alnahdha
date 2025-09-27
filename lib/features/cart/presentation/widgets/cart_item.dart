@@ -1,4 +1,6 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:masarat_alnahdha/core/generated/app_image.dart';
+import 'package:masarat_alnahdha/core/helpers/widget_extensions.dart';
 import 'package:masarat_alnahdha/core/themes/colors/colors.dart';
 import 'package:masarat_alnahdha/core/themes/styles/app_text_style.dart';
 import 'package:masarat_alnahdha/core/widgets/cashed_images.dart';
@@ -8,6 +10,8 @@ import 'package:masarat_alnahdha/features/cart/data/models/cart_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:masarat_alnahdha/features/cart/presentation/cubit/cart_screen_cubit.dart';
+import 'package:masarat_alnahdha/features/cart/presentation/cubit/cart_screen_event.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem({
@@ -157,25 +161,29 @@ class CartDetailsSection extends StatelessWidget {
           5.verticalSpace,
           5.verticalSpace,
           5.verticalSpace,
-          Text(
-            "الكمية : ${cartItem.quantity}",
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-
-          5.verticalSpace,
-          Divider(height: 20, thickness: .5, color: LightColors.greyColor),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "${cartItem.price + 1000} د.ع",
+                "الكمية : ${cartItem.quantity}",
+                textAlign: TextAlign.start,
+                style: Theme.of(context).textTheme.bodyMedium,
+              ).expand(),
+
+              Text(
+                "${cartItem.price} ر.س",
+                textAlign: TextAlign.end,
                 style: AppTextStyle.bold18(
                   context,
                 ).copyWith(color: LightColors.orangeColor),
-              ),
-              Expanded(child: SizedBox(width: 10)),
-              CartStepperCounter(cartItem: cartItem),
+              ).expand(),
             ],
           ),
+
+          // 5.verticalSpace,
+          Divider(height: 5, thickness: .5, color: LightColors.greyColor),
+
+          CartStepperCounter(cartItem: cartItem),
         ],
       ),
     );
@@ -192,43 +200,50 @@ class CartStepperCounter extends StatefulWidget {
 
 class _CartStepperCounterState extends State<CartStepperCounter> {
   int counter = 1;
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         IconButton(
           onPressed: () {
-            if (counter > 1) {
+            if (widget.cartItem.selectedQuantity > 1) {
               setState(() {
                 counter--;
               });
+              widget.cartItem.updateQuantity(false);
+              BlocProvider.of<CartScreenCubit>(context).add(CalcTotal());
             }
           },
           icon: const Icon(Icons.remove),
-        ),
+          iconSize: 30.w,
+        ).expand(),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 6.h),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(1),
             border: Border.all(color: LightColors.greyColor),
           ),
           child: Text(
-            counter.toString(),
+            widget.cartItem.selectedQuantity.toString(),
             style: AppTextStyle.bold16(
               context,
-            ).copyWith(fontSize: 20.sp, height: 1.5),
-          ),
-        ),
+            ).copyWith(fontSize: 18.sp, height: 1.5),
+          ).center(),
+        ).expand(flex: 2),
         IconButton(
           onPressed: () {
-            if (counter < widget.cartItem.quantity) {
+            if (widget.cartItem.selectedQuantity < widget.cartItem.quantity) {
               setState(() {
                 counter++;
               });
+              widget.cartItem.updateQuantity(true);
+              BlocProvider.of<CartScreenCubit>(context).add(CalcTotal());
             }
           },
           icon: const Icon(Icons.add),
-        ),
+          iconSize: 30.w,
+        ).expand(),
       ],
     );
   }
